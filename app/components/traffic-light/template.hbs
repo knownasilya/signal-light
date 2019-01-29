@@ -1,0 +1,10 @@
+{{#let (state (type "traffic-light")) as |light|}}
+  <div class="trafficlight" ...attributes>
+    <div class="protector" />
+    <div class="protector" />
+    <div class="protector" />
+    <div class="red {{if light.color.isRed "is-active"}}" />
+    <div class="yellow {{if light.color.isYellow "is-active"}}" />
+    <div class="green {{if light.color.isGreen 'is-active'}} {{if light.isBlinking 'is-blinking'}}" />
+  </div>
+{{/let}}
