@@ -24,7 +24,6 @@ export const Color = Union({
   }
 });
 
-
 export default class TrafficLight {
   color = Color.Red.create();
   timer = create(Number, LONG_TIME);
@@ -34,10 +33,6 @@ export default class TrafficLight {
       return this.timer.set(SHORT_TIME);
     }
     return this;
-  }
-
-  get isBlinking() {
-    return this.color.isGreen && this.timer.state < 7;
   }
 
   changeColor(color) {
@@ -55,10 +50,10 @@ export default class TrafficLight {
       // when the time expired, change the color
       let changed = next.color.change();
       if (changed.color.isYellow) {
-        // yellow only runs for 5 seconds
+        // yellow only runs for 3 seconds
         return changed.timer.set(SHORT_TIME);
       } else {
-        // all other run for full 15 seconds
+        // all other run for full 8 seconds
         return changed.timer.set(LONG_TIME);
       }
     } else {

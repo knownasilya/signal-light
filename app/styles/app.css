@@ -130,7 +130,7 @@ footer {
 }
 
 .yellow.is-active {
-  background: yellow;
+  background: #f3c710;
 }
 
 .green {
@@ -147,7 +147,7 @@ footer {
 }
 
 .green.is-active {
-  background: green;
+  background: #25e225;
 }
 
 .is-blinking {
