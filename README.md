@@ -1,7 +1,10 @@
 # signal-light
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+A simple app displaying a traffic light that can be interacted
+with to change the light on demand.
+
+Mostly copied from https://github.com/microstates/trafficlight with a
+few tweaks.
 
 ## Prerequisites
 
