@@ -7,7 +7,6 @@
     class="
       red
       {{if this.light.color.isRed "is-active"}}
-      {{if this.light.isBlinking "is-blinking"}}
     "
     onclick={{action this.light.changeColor "red"}}
   />
@@ -16,7 +15,6 @@
     class="
       yellow
       {{if this.light.color.isYellow "is-active"}}
-      {{if this.light.isBlinking "is-blinking"}}
     "
     onclick={{action this.light.changeColor "yellow"}}
   />
