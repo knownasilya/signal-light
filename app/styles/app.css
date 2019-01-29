@@ -6,11 +6,13 @@ html {
 body {
   height: 100vh;
   margin: 0;
+  transform: scale(1.4,1.4);
 }
 
-#root {
+.ember-view {
   display: flex;
   flex-direction: column;
+  align-items: center;
   height: 100%;
 }
 
@@ -28,7 +30,7 @@ footer {
 }
 
 .trafficlight {
-  margin: 40px;
+  margin-top: 20vh;
   background: #222;
   background-image: linear-gradient(
     transparent 2%,
