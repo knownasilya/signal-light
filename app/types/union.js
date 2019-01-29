@@ -1,10 +1,10 @@
-import { create, valueOf, Primitive } from '@microstates/ember';
+import { create, valueOf } from '@microstates/ember';
+import { Primitive } from "microstates/dist/microstates.cjs";
 
 export default function Union(members, Base = class {}) {
   let types = Object.keys(members);
 
   let UnionType = class extends Base {
-
     type = TypeId(types);
 
     initialize(value) {
