@@ -41,6 +41,7 @@ export default class TrafficLight {
   }
 
   changeColor(color) {
+    this.timer.set(0);
     switch(color) {
       case 'red': return this.color.type.toRed();
       case 'green': return this.color.type.toGreen();
