@@ -2,7 +2,31 @@
   <div class="protector" />
   <div class="protector" />
   <div class="protector" />
-  <div class="red {{if this.light.color.isRed "is-active"}}" />
-  <div class="yellow {{if this.light.color.isYellow "is-active"}}" />
-  <div class="green {{if this.light.color.isGreen "is-active"}} {{if this.light.isBlinking "is-blinking"}}" />
+  <div
+    role="button"
+    class="
+      red
+      {{if this.light.color.isRed "is-active"}}
+      {{if this.light.isBlinking "is-blinking"}}
+    "
+    onclick={{action this.light.changeColor "red"}}
+  />
+  <div
+    role="button"
+    class="
+      yellow
+      {{if this.light.color.isYellow "is-active"}}
+      {{if this.light.isBlinking "is-blinking"}}
+    "
+    onclick={{action this.light.changeColor "yellow"}}
+  />
+  <div
+    role="button"
+    class="
+      green
+      {{if this.light.color.isGreen "is-active"}}
+      {{if this.light.isBlinking "is-blinking"}}
+    "
+    onclick={{action this.light.changeColor "green"}}
+  />
 </div>

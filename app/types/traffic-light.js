@@ -2,8 +2,8 @@ import { create } from '@microstates/ember';
 
 import Union from './union';
 
-const LONG_TIME = 15;
-const SHORT_TIME = 5;
+const LONG_TIME = 8;
+const SHORT_TIME = 3;
 
 
 export const Color = Union({
@@ -38,6 +38,14 @@ export default class TrafficLight {
 
   get isBlinking() {
     return this.color.isGreen && this.timer.state < 7;
+  }
+
+  changeColor(color) {
+    switch(color) {
+      case 'red': return this.color.type.toRed();
+      case 'green': return this.color.type.toGreen();
+      case 'yellow': return this.color.type.toYellow();
+    }
   }
 
   cycle() {
