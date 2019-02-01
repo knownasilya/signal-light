@@ -35,11 +35,13 @@ export default class TrafficLight {
   }
 
   changeColor(color) {
-    this.timer.set(0);
+    let time = color === 'yellow' ? SHORT_TIME : LONG_TIME;
+    let res = this.timer.set(time);
+
     switch(color) {
-      case 'red': return this.color.type.toRed();
-      case 'green': return this.color.type.toGreen();
-      case 'yellow': return this.color.type.toYellow();
+      case 'red': return res.color.type.toRed();
+      case 'green': return res.color.type.toGreen();
+      case 'yellow': return res.color.type.toYellow();
     }
   }
 
