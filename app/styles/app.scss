@@ -96,6 +96,14 @@ body {
     top: 20px;
     left: 35px;
   }
+
+  .light-off {
+    opacity: 0.6;
+  }
+
+  .is-blinking {
+    border-style: solid;
+  }
 }
 
 .protector {
@@ -114,7 +122,7 @@ body {
 
 
 .red {
-  background-image: radial-gradient(brown, transparent);
+  background-image: radial-gradient(#ff0707, transparent);
   background-size: 5px 5px;
   width: 100px;
   height: 100px;
