@@ -1,0 +1,12 @@
+<div class="light blinkinglight" ...attributes>
+  <div class="protector" />
+  <div
+    role="button"
+    class="
+      {{if this.light.color.isRed "red"}}
+      {{if this.light.color.isYellow "yellow"}}
+      is-blinking
+    "
+    onclick={{this.light.color.change}}
+  />
+</div>

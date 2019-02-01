@@ -5,7 +5,6 @@ import Union from './union';
 const LONG_TIME = 8;
 const SHORT_TIME = 3;
 
-
 export const Color = Union({
   Red: Color => class extends Color {
     change() {

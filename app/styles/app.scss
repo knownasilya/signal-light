@@ -15,7 +15,7 @@ body {
   height: 100%;
 }
 
-.trafficlight {
+.light {
   margin-top: 20vh;
   background: #222;
   background-image: linear-gradient(
@@ -32,7 +32,32 @@ body {
   display: flex;
 }
 
-.trafficlight:before {
+.trafficlight {
+  .protector:nth-child(2) {
+    top: 140px;
+  }
+
+  .protector:nth-child(3) {
+    top: 260px;
+  }
+
+  .red {
+    top: 20px;
+    left: 35px;
+  }
+
+  .yellow {
+    top: 145px;
+    left: 35px;
+  }
+
+  .green {
+    top: 270px;
+    left: 35px;
+  }
+}
+
+.light:before {
   background: #222;
   background-image: radial-gradient(#444, #000);
   content: "";
@@ -46,7 +71,7 @@ body {
   z-index: -1;
 }
 
-.trafficlight:after {
+.light:after {
   background: #222;
   background-image: linear-gradient(-90deg, #222 0%, #444 30%, #000);
   content: "";
@@ -56,6 +81,21 @@ body {
   position: absolute;
   top: 150px;
   z-index: -1;
+}
+
+.blinkinglight {
+  height: 150px;
+  margin-top: 35vh;
+
+  .red {
+    top: 20px;
+    left: 35px;
+  }
+
+  .yellow {
+    top: 20px;
+    left: 35px;
+  }
 }
 
 .protector {
@@ -72,13 +112,6 @@ body {
   z-index: -1;
 }
 
-.protector:nth-child(2) {
-  top: 140px;
-}
-
-.protector:nth-child(3) {
-  top: 260px;
-}
 
 .red {
   background-image: radial-gradient(brown, transparent);
@@ -87,8 +120,6 @@ body {
   height: 100px;
   border-radius: 50%;
   position: absolute;
-  top: 20px;
-  left: 35px;
   border: dotted 2px red;
   box-shadow: 0 0 20px #111 inset, 0 0 10px red;
 }
@@ -109,8 +140,6 @@ body {
   border-radius: 50%;
   border: dotted 2px yellow;
   position: absolute;
-  top: 145px;
-  left: 35px;
   /* animation: 13s yellow infinite; */
   box-shadow: 0 0 20px #111 inset, 0 0 10px yellow;
 }
@@ -127,8 +156,6 @@ body {
   border-radius: 50%;
   border: dotted 2px lime;
   position: absolute;
-  top: 270px;
-  left: 35px;
   box-shadow: 0 0 20px #111 inset, 0 0 10px lime;
 }
 

@@ -1,3 +1,11 @@
-<TrafficLight/>
+<button type="button" {{action (mut this.blinkingLight) (not this.blinkingLight)}}>
+  Toggle
+</button>
+
+{{#if this.blinkingLight}}
+  <BlinkingLight/>
+{{else}}
+  <TrafficLight/>
+{{/if}}
 
 {{outlet}}

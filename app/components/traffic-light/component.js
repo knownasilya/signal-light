@@ -12,6 +12,10 @@ export default Component.extend({
     this._super(...arguments);
     
     setInterval(() => {
+      if (this.isDestroyed || this.isDestroying) {
+        return;
+      }
+
       this.light.cycle();
     }, 1000);
   }
