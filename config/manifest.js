@@ -15,7 +15,12 @@ module.exports = function(/* environment, appConfig */) {
     icons: [
       {
         src: 'icon.png',
-        sizes: '180x180'
+        sizes: '180x180',
+        type: 'image/png'
+      }, {
+        src: 'icon-512x512.png',
+        sizes: '512x512',
+        type: 'image/png'
       }
     ],
     ms: {
