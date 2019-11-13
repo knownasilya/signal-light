@@ -1,11 +1,13 @@
-<button type="button" {{on "click" (action (mut this.blinkingLight) (not this.blinkingLight))}}>
-  Toggle
+<button type="button" {{on "click" this.rotateLights}}>
+  Next Light
 </button>
 
-{{#if this.blinkingLight}}
-  <BlinkingLight/>
-{{else}}
+{{#if (eq this.light "traffic")}}
   <TrafficLight/>
+{{else if (eq this.light "blinking")}}
+  <BlinkingLight/>
+{{else if (eq this.light "alternating")}}
+  <AlternatingLight/>
 {{/if}}
 
 {{outlet}}

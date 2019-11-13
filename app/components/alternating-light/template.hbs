@@ -1,0 +1,27 @@
+<div class="alternatinglight" ...attributes>
+  <div class="horizontal">
+    <div class="hood">
+      <div
+        role="button"
+        class="
+          red
+          left
+          {{if this.light.side.isLeft "is-active"}}
+        "
+        {{on "click" (fn this.light.changeSide "right")}}
+      />
+    </div>
+    <div class="bar"></div>
+    <div class="hood">
+      <div
+        role="button"
+        class="
+          red
+          right
+          {{if this.light.side.isRight "is-active"}}
+        "
+        {{on "click" (fn this.light.changeSide "left")}}
+      />
+    </div>
+  </div>
+</div>
