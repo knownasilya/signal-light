@@ -1,4 +1,4 @@
-<button type="button" {{action (mut this.blinkingLight) (not this.blinkingLight)}}>
+<button type="button" {{on "click" (action (mut this.blinkingLight) (not this.blinkingLight))}}>
   Toggle
 </button>
 

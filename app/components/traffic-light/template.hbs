@@ -8,7 +8,7 @@
       red
       {{if this.light.color.isRed "is-active"}}
     "
-    onclick={{action this.light.changeColor "red"}}
+    {{on "click" (fn this.light.changeColor "red")}}
   />
   <div
     role="button"
@@ -16,7 +16,7 @@
       yellow
       {{if this.light.color.isYellow "is-active"}}
     "
-    onclick={{action this.light.changeColor "yellow"}}
+    {{on "click" (fn this.light.changeColor "yellow")}}
   />
   <div
     role="button"
@@ -24,6 +24,6 @@
       green
       {{if this.light.color.isGreen "is-active"}}
     "
-    onclick={{action this.light.changeColor "green"}}
+    {{on "click" (fn this.light.changeColor "green")}}
   />
 </div>
