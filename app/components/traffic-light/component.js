@@ -1,15 +1,16 @@
-import Component from '@ember/component';
+import Component from '@glimmer/component';
+import { set } from '@ember/object';
 import { create, state } from '@microstates/ember';
 import TrafficLight from '../../types/traffic-light';
 
 let microstate = create(TrafficLight);
 
-export default Component.extend({
-  tagName: '',
-  light: state(microstate),
+export default class TrafficLightComponent extends Component {
+  @(state(microstate))
+  light;
 
-  init() {
-    this._super(...arguments);
+  constructor() {
+    super(...arguments);
     
     setInterval(() => {
       if (this.isDestroyed || this.isDestroying) {
@@ -19,4 +20,9 @@ export default Component.extend({
       this.light.cycle();
     }, 1000);
   }
-});
+
+  // hack for now till microstates addon updated
+  set() {
+    set(this, ...arguments);
+  }
+}
